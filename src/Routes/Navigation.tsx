@@ -48,9 +48,9 @@ const Navigation = () => {
         <Routes>
           <Route path="/" element={<ShoppingPage />} />
           <Route path="/users" element={<h1>Users</h1>} />
-          <Route path="/home" element={<h1>Home</h1>} />
+          <Route path="/about" element={<h1>About</h1>} />
 
-          <Route path="*" element={<Navigate to="/home" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,6 +1,8 @@
 import ProductCard from '../components';
 import { ProductImage, ProductTitle, ProductButtons } from '../components';
 
+import '../styles/custom-styles.css'
+
 const product = {
   id: '1',
   title: 'Coffee Mug - Card',
@@ -19,16 +21,33 @@ const ShoppingPage = () => {
         flexWrap: 'wrap'
       }}>
 
-        <ProductCard product={product}>
-          <ProductCard.Image />
-          <ProductCard.Title />
-          <ProductCard.Buttons />
+        <ProductCard product={product} className='bg-dark text-white'>
+          <ProductCard.Image style={{boxShadow: '10px 10px 10pxrgba(0, 0, 0, 0.2)'}} className="custom-image"/>
+          <ProductCard.Title className="text-bold"/>
+          <ProductCard.Buttons className="custom-buttons" />
         </ProductCard>
         
-        <ProductCard product={product}>
-          <ProductImage />
-          <ProductTitle title='Taza mamalona' />
-          <ProductButtons />
+        <ProductCard 
+          product={product}
+          className='bg-dark text-white'
+        >
+          <ProductImage className="custom-image" />
+          <ProductTitle title='Taza chidoris' className=" text-bold" />
+          <ProductButtons className="custom-buttons" />
+        </ProductCard>
+        
+        <ProductCard 
+          product={product} 
+          style={{
+            backgroundColor: '#70D1F8'
+          }}
+        >
+          <ProductImage style={{boxShadow: '10px 10px 10pxrgba(0, 0, 0, 0.2)'}}  />
+          <ProductTitle style={{fontWeight: 'bold'}} />
+          <ProductButtons style={{
+            display: 'flex',
+            justifyContent: 'end'
+          }}/>
         </ProductCard>
 
       </div>
