@@ -10,7 +10,7 @@ export interface Props {
   style?: React.CSSProperties
 }
 
-export const ProductTitle = ({ title, className, style, }: Props) => {
+export const ProductTitle = ({ title='', className, style, }: Props) => {
   const { product } = useContext(ProductContext)
 
   return <span style={style} className={`${styles.productDescription} ${className}`}>
